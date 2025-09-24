@@ -1,0 +1,64 @@
+{
+  "name": "Simple Groq App",
+  "description": "A simple application using FastAPI backend with Groq AI integration and Streamlit frontend",
+  "website": "https://github.com/your-username/simple-groq-app",
+  "repository": "https://github.com/your-username/simple-groq-app",
+  "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  "success_url": "/",
+  "keywords": [
+    "python",
+    "fastapi",
+    "streamlit",
+    "groq",
+    "ai",
+    "chatbot"
+  ],
+  "image": "heroku/python",
+  "stack": "heroku-22",
+  "env": {
+    "GROQ_API_KEY": {
+      "description": "Your Groq API key for accessing AI models",
+      "required": true
+    },
+    "APP_NAME": {
+      "description": "Application name",
+      "value": "Simple Groq App",
+      "required": false
+    },
+    "APP_VERSION": {
+      "description": "Application version",
+      "value": "1.0.0",
+      "required": false
+    },
+    "DEBUG": {
+      "description": "Enable debug mode",
+      "value": "False",
+      "required": false
+    },
+    "BACKEND_HOST": {
+      "description": "Backend host address",
+      "value": "0.0.0.0",
+      "required": false
+    },
+    "BACKEND_PORT": {
+      "description": "Backend port (will be overridden by Heroku)",
+      "value": "8000",
+      "required": false
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "scripts": {
+    "postdeploy": "echo 'Deployment completed successfully!'"
+  }
+}
